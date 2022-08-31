@@ -1,0 +1,280 @@
+analysis_name,raw_name,variable_category,name_in_tables
+name,,,
+id,,,
+age,,Individual,Age
+gender,,Individual,Gender
+race,,,
+month,,,
+day,,,
+year,,,
+classification,,,
+armed,,,
+guardian_descrip,,,
+guardian_url1,,,
+guardian_url2,,,
+guardian_url3,,,
+guardian_url4,,,
+other_url_1,,,
+other_url_2,,,
+other_url_3,,,
+other_url_4,,,
+other_url_5,,,
+other_url_6,,,
+time,,,
+indoor,,,
+location,,,
+reason_contact,,,
+warrant_crime,,,
+crime,,,
+behavior,,,
+domestic,,Situational,Domestic Disturbance
+witness,,,
+near_friend,,Situational,Friend or Family Present
+child_witness,,Situational,Child Present
+non_compliance,,,
+police_tactic,,,
+shots_fired,,,
+shots_struck,,,
+shot_execution,,Policing,Shot Execution Style
+officer_present,,Policing,Number Officers Present
+officer_fire,,Policing,Number of Officers Using Lethal Force
+officer_name,,Policing,Officer Name
+officer_years,,Policing,Officer Years in the Force
+officer_gender,,,
+officer_race,,,
+officer_undercover,,,
+officer_offduty,,,
+swat,,Policing,Tactic: SWAT
+officer_personal,,Policing,Officer Personal
+mental,,Individual,Mental Health
+suicide_by_cop,,,
+intox,,Individual,Intoxicated
+deced_personal,,,
+deced_descrip,,,
+deced_occupy,,,
+criminal_rec,,Criminal Activity,Criminal Record 
+violent_rec,,Criminal Activity,Violent Record
+video,,Situational,Video of Incident
+video_public,,Situational,Public Video of Incident
+behavior_property,behavior_Damaging property,,
+behavior_erratic,behavior_Erratic Behavior,,
+behavior_mental,"behavior_Mental health episode or ""psychotic break""",,
+behavior_none,behavior_None of the above,Threat,Pre-contact: No disruptive behavior
+behavior_other,behavior_Other disruptive behavior. Specify:,,
+behavior_suicide,behavior_Suicidal behavior or threats. (e.g. holding gun to own head),,
+behavior_threat_arm,behavior_Threatening behavior (armed),Threat,Pre-contact: Armed Threatening Behavior
+behavior_threat_unarm,behavior_Threatening behavior (unarmed),Threat,Pre-contact: Unarmed Threatening Behavior
+behavior_verbal,behavior_Verbal or written threats,,
+behavior_yell,behavior_Yelling at or arguing with others,,
+crime_arson,crime_Arson,,
+crime_assault,crime_Assault,,
+crime_burglar,crime_Burglary/Breaking &amp; Entering,,
+crime_property,crime_Destruction/Damage/Vandalism of Property,,
+crime_disorder,crime_Disorderly Conduct,,
+crime_drug,crime_Drug/Narcotic Offences,,
+crime_dui,crime_DUI,,
+crime_homicide,crime_Homicide,,
+crime_homicide_attempt,crime_Homicide (attempted),,
+crime_threat,crime_Intimidation/Threats,,
+crime_kidnap,crime_Kidnapping/Abduction,,
+crime_theft_auto,crime_Motor Vehicle Theft,,
+crime_none,crime_None of the above,Criminal Activity,Crime: None
+crime_other,crime_Other Crime,,
+crime_parole,crime_Probation/parole violation,,
+crime_prostitution,crime_Prostitution,,
+crime_robbery,crime_Robbery,,
+crime_sex,crime_Sex Offenses,,
+crime_theft,crime_Theft,,
+crime_traffic,crime_Traffic Law Violations,,
+crime_trespass,crime_Trespassing,,
+crime_weapon,crime_Weapon Law Violations,,
+w_crime_assault,warrant_crime_Assault,,
+w_crime_burglar,warrant_crime_Burglary/Breaking & Entering,,
+w_crime_drug,warrant_crime_Drug/Narcotic Offences,,
+w_crime_homicide,warrant_crime_Homicide,,
+w_crime_homicide_attempt,warrant_crime_Homicide (attempted),,
+w_crime_threat,warrant_crime_Intimidation/Threats,,
+w_crime_kidnap,warrant_crime_Kidnapping/Abduction,,
+w_crime_unknown,warrant_crime_Not specified,,
+w_crime_other,warrant_crime_Other Crime,,
+w_crime_parole,warrant_crime_Probation/parole violation,,
+w_crime_robbery,warrant_crime_Robbery,,
+w_crime_sex,warrant_crime_Sex Offenses,,
+w_crime_theft,warrant_crime_Theft,,
+w_crime_traffic,warrant_crime_Traffic Law Violations,,
+w_crime_trespass,warrant_crime_Trespassing,,
+w_crime_weapon,warrant_crime_Weapon Law Violations,,
+non_compliance_argue,non_compliance_Argue with the officer,,
+non_compliance_barricade,non_compliance_Barricade themselves from police,Threat,Construct Barricade
+non_compliance_lunge,non_compliance_Charge/lunge at officer,Threat,Lunge at Officer
+non_compliance_disobey,non_compliance_Disobey or ignore police orders,Threat,Disobey Officer Orders
+non_compliance_display,non_compliance_Display or brandish gun,Threat,Display or Brandish Weapon
+non_compliance_driveat,non_compliance_Drive at officer (not in police vehicle),,
+non_compliance_drive,non_compliance_Drive away from police,,
+non_compliance_endanger,non_compliance_Endanger civilians,Threat,Endanger Civilians
+non_compliance_fight,non_compliance_Fight officer,,
+non_compliance_hit,non_compliance_Grab or hit officer,,
+non_compliance_injure,non_compliance_Injure officer,,
+non_compliance_kill,non_compliance_Kill officer,,
+non_compliance_injure_dog,non_compliance_Kill or injure police dog,,
+non_compliance_chase,non_compliance_Lead a car chase,Threat,Vehicle Chase
+non_compliance_none,non_compliance_None of the above,Threat,No Threat or Non-compliance
+non_compliance_other,non_compliance_Other aggressive or non-compliant behavior. Specify:,Threat,Non-compliance: Other
+non_compliance_point_weapon,non_compliance_Point weapon at officer,Threat,Point Weapon at Officer
+non_compliance_ram,non_compliance_Ram officer vehicle,,
+non_compliance_reach_officer,non_compliance_Reach for officer gun,,
+non_compliance_reach_weapon,non_compliance_Reach for own weapon,,
+non_compliance_reach_waist,non_compliance_Reach towards waistband or back (if unarmed),,
+non_compliance_resist,non_compliance_Resist arrest,,
+non_compliance_run,non_compliance_Run away from police,Threat, Run from Officer
+non_compliance_shoot_first,non_compliance_Shoot first at officer,,
+non_compliance_shoot,non_compliance_Shoot gun at officer,,
+non_compliance_threaten,non_compliance_Threaten officer with weapon,Threat,Threaten Officer with Weapon
+non_compliance_yell,non_compliance_Yell at or insult the officer,,
+tactic_wall,police_tactic_Bring victim against a wall,,
+tactic_ground,police_tactic_Bring victim to the ground,,
+tactic_detain,police_tactic_Detain/Restrain victim,,
+tactic_nonlethal,police_tactic_Fire non-lethal rounds (e.g. bean bag,Policing,Tactic: Non-lethal Ammunition
+tactic_handcuff,police_tactic_Handcuff victim,,
+tactic_hit,police_tactic_Hit or push victim,,
+tactic_verbal,police_tactic_Issue verbal commands,Policing,Tactic: Verbal Commands
+tactic_hands,police_tactic_Lay hands on victim,,
+tactic_none,police_tactic_None of the above,Policing,No Non-lethal Tactics
+tactic_other,police_tactic_Other non-lethal tactic. Specify:,Policing,Tactic: Other
+tactic_taser,police_tactic_Use TASER,Policing,Tactic: TASER
+tactic_baton,police_tactic_Use baton,,
+tactic_negotiator,police_tactic_Use crisis negotiator,Policing,Tactic: Negotiator
+tactic_chemical_spray,police_tactic_Use pepper spray,Policing,Tactic: Spray
+tactic_dog,police_tactic_Use police dog,Policing,Tactic: Dog
+officer_female,officer_gender_Female. Number of officers:,Policing,Officer Female
+officer_male,officer_gender_Male. Number of officers:,Policing,Officer Male
+officer_gender_unknown,officer_gender_Unknown. Number of officers:,Policing,Officer Gender Unknown
+officer_asian,officer_race_Asian/Pacific Islander,,
+officer_black,officer_race_Black,Policing,Officer Black
+officer_latino,officer_race_Hispanic/Latino,,
+officer_race_unknown,officer_race_Unknown,Policing,Officer Race Unknown
+officer_white,officer_race_White,Policing,Officer White
+mental_bipolar,mental_type_Bipolar disorder,,
+mental_depression,mental_type_Depression,,
+mental_general,mental_type_General or unspecified mental health issues,,
+mental_other,mental_type_Other. Specify:,,
+mental_schizo,mental_type_Schizophrenia,,
+mental_suicidal,mental_type_Suicidal thoughts,,
+intox_alcohol,intox_type_Alcohol,,
+intox_drug,intox_type_Drugs. Specify type:,,
+intox_other,intox_type_Other,,
+personal_disabled,deced_personal_Disabled,Individual,Disabled
+personal_divorced,deced_personal_Divorced/Separated,Individual,Divorced
+personal_queer,deced_personal_Gay,,
+personal_had_children,deced_personal_Had children,Individual,Had Children
+personal_married,deced_personal_Married,Individual,Married
+personal_none,deced_personal_None of the above,Individual,No Personal Information
+alcoholic,deced_descrip_Alcoholic,,
+document_imm,deced_descrip_Documented immigrant. Specify country of origin:,,
+drug_addict,deced_descrip_Drug addict,,
+gang_member,deced_descrip_Gang member,Criminal Activity,Gang Member
+homeless,deced_descrip_Homeless,Individual,Homeless
+descrip_none,deced_descrip_None of the above,Individual,No Demographic Description
+released_jail,deced_descrip_Recently released from jail or prison (Less than three months),Individual,Recent Jail or Prison
+undoc_imm,deced_descrip_Undocumented immigrant. Specify country of origin:,,
+descrip_out_of_town,deced_descrip_Visiting from out of town. (Not from state where they died),Individual,From Out of Town
+occupy_military,deced_occupy_Current military. Enter military branch:,,
+occupy_law_enforcement,deced_occupy_Current or former law enforcement or corrections,Individual,Occupation: Law Enforcement
+educ_history,deced_occupy_Education history. Specify school name(s) and/or fields of study:,Individual,Educational History
+employed,deced_occupy_Employed. Specify occupation and/or business,Individual,Employed
+occupy_fmr_military,deced_occupy_Former military. Enter military branch:,,
+in_school,deced_occupy_In school. Specify school name:,Individual,In School
+occupy_none,deced_occupy_No employment or education info given,Individual,Occupation: None Given
+occupy_other,deced_occupy_Other. Specify:,,
+retired,deced_occupy_Retired,,
+unemployed,deced_occupy_Unemployed,,
+video_bystander,video_source_Bystander footage,,
+video_other,video_source_Other. Specify:,,
+video_body_cam,video_source_Police - Body Cam,,
+video_dash_cam,video_source_Police - Dash cam,,
+video_surveillance,video_source_Surveillance or security footage,,
+manner_custody,classification_Death in custody,Policing,Cause of Death: In Custody
+manner_gunshot,classification_Gunshot,Policing,Cause of Death: Gunshot
+manner_other,classification_Other,Policing,Cause of Death: Other
+manner_vehicle,classification_Struck by vehicle,Policing,Cause of Death: Police Vehicle
+manner_taser,classification_Taser,Policing,Cause of Death: Taser
+armed_disputed,armed_Disputed,,
+armed_firearm,armed_Firearm,Threat,Armed: Firearm
+armed_knife,armed_Knife,Threat,Armed: Knife
+unarmed,armed_No,Threat,Unarmed
+armed_nonlethal_gun,armed_Non-lethal firearm,Threat,Armed: Non-lethal Firearm
+armed_other,armed_Other,,
+armed_unknown,armed_Unknown,,
+armed_vehicle,armed_Vehicle,,
+location_business,location_Business,Situational,Location: Business
+location_gov,location_Government property (e.g. police station,Situational,Location: Government Property
+location_res,location_Other residence,Situational,Location: Other Residence
+location_other,location_Other. Specify:,,
+location_park,location_Park,,
+location_res_victim,location_Residence of victim,Situational,Location: Residence of Decedent
+location_school,location_School,,
+location_street,location_Street/Road,Situational,Location: Street
+location_yard,location_Yard/Lot,,
+reason_witness_crime,reason_contact_Officer witness crime in progress,,
+reason_other,reason_contact_Other,,
+reason_aid,reason_contact_Police called to deliver aid to victim,Situational,Reason for Contact: Welfare Check or Aid
+reason_investigation,reason_contact_Police conducting criminal investigation,Situational,Reason for Contact: Criminal Investigation
+reason_friend,reason_contact_Police responding to a reported offence by someone associated with the victim,,
+reason_stranger,reason_contact_Police responding to a reported offence by someone NOT associated with the victim,,
+reason_service_call,reason_contact_Police responding to a reported offense by the victim,Situational,Reason for Contact: Service Call
+reason_warrant,reason_contact_Police serving warrant,Situational,Reason for Contact: Warrant
+reason_street_stop,reason_contact_Street stop,Situational,Reason for Contact: Street Stop
+reason_traffic_stop,reason_contact_Traffic Stop,Situational,Reason for Contact: Traffic Stop
+reason_accident,reason_contact_Vehicle accident,,
+reason_voluntary,reason_contact_Victim made voluntary contact with the police (eg. called for assistance),Situational,Reason for Contact: Voluntary
+indoors,indoor_Indoors,Situational,Location: Indoors
+outdoors,indoor_Outdoors,,
+indoor_unknown,indoor_Unknown,,
+witness_no,witness_No,,
+witness_unclear,witness_Unclear,,
+witness_yes,witness_Yes,Situational,Witness Present
+shots_fired_num_given,shots_fired_Exact number given. Enter number:,Policing,Number of Shots Fired
+shots_fired_multiple,"shots_fired_Number not given but term ""multiple shots"" used",,
+shots_fired_unknown,shots_fired_Unknown (does not mention any quantity),,
+shots_struck_num_given,shots_struck_Exact number given. Enter number:,Policing,Number of Gunshot Wounds
+shots_struck_multiple,"shots_struck_Number not given but term ""multiple shots"" used",,
+shots_struck_unknown,shots_struck_Unknown (does not mention any quantity),,
+crime_other2,,Criminal Activity,Crime: Other
+crime_property2,,Criminal Activity,Crime: Property
+crime_public_order,,Criminal Activity,Crime: Public Order
+crime_violent,,Criminal Activity,Crime: Violent
+w_crime_public_order,,Criminal Activity,Outstanding Warrant: Public Order
+w_crime_other2,,Criminal Activity,Outstanding Warrant: Other
+w_crime_property,,Criminal Activity,Outstanding Warrant: Property
+w_crime_violent,,Criminal Activity,Outstanding Warrant: Violent
+immigrant,,Individual,Immigrant
+occupy_other2,,Individual,Occupation: Other
+substance_problem,,Individual,Substance Problem
+suicidal,,Individual,Suicidal
+veteran,,Individual,Veteran
+officer_no_uniform,,Policing,Officer Without Uniform
+officer_other_race,,Policing,Officer Other Race
+tactic_detain_handcuff,,Policing,Tactic: Handcuff
+tactic_physical,,Policing,Tactic: Physical Contact or Restraint
+day_week_fri,,Situational,Day of Week: Fri
+day_week_mon,,Situational,Day of Week: Mon
+day_week_sat,,Situational,Day of Week: Sat
+day_week_sun,,Situational,Day of Week: Sun
+day_week_thu,,Situational,Day of Week: Thur
+day_week_tue,,Situational,Day of Wee: Tue
+day_week_wed,,Situational,Day of Week: Wed
+location_other2,,Situational,Location: Other
+reason_other2,,Situational,Reason for Contact: Other
+time_afternoon,,Situational,Time of Day: Afternoon
+time_evening,,Situational,Time of Day: Evening
+time_morning,,Situational,Time of Day: Morning
+time_night,,Situational,Time of day: Night
+time_unknown,,Situational,Time of day: Unknown
+armed_other2,,Threat,Armed: Other Weapon
+behavior_mental_crisis,,Threat,Pre-contact: Mental Crisis
+behavior_other2,,Threat,Pre-contact: Other Disruptive Behavior
+non_compliance_kill_injure,,Threat,Kill or Injure Officer or K9
+non_compliance_physical,,Threat,Resist Officer
+non_compliance_shoot2,,Threat,Shoot at Officer
+non_compliance_vehicle,,Threat,Threaten Officer with Vehicle
+non_compliance_verbal,,Threat,Verbal Non-Compliance
