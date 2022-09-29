@@ -10,7 +10,8 @@ library(quanteda)
 
 
 # Vamos carregar os dados com:
-discursos <- read_csv2(here("discursos", "discursos_presidenciais.csv")) %>%
+discursos <- "https://github.com/FLS-6497/datasets/blob/main/aula5/discursos_presidenciais.csv?raw=true" %>%
+  read_csv2() %>%
   mutate(id = row_number()) # Criamos um ID
 
 
