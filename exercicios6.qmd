@@ -1,0 +1,165 @@
+---
+title: "Exercícios 6"
+subtitle: "Aula 6"
+reference-location: margin
+lang: pt
+twitter-card: true
+creator: "@meirelesff"
+---
+
+# 1) Polinômios
+
+Para esse exercício, precisaremos carregar dados climáticos de São Bernardo do Campo:
+
+::: {.panel-tabset}
+
+## R
+
+``` {.r}
+link <- "https://raw.githubusercontent.com/jacobwright32/Web_Scraper_AI_Core_Project/bb4865ae568e23ab8fadb6ea58cf117df2164ef3/web%20scraping/Cleaned%20Data/Brazil_Sao%20Bernardo%20Do%20Campo_Cleaned.csv"
+dados <- readr::read_csv(link)
+```
+
+## Python
+
+``` {.python}
+import pandas as pd
+
+link = 'https://raw.githubusercontent.com/jacobwright32/Web_Scraper_AI_Core_Project/bb4865ae568e23ab8fadb6ea58cf117df2164ef3/web%20scraping/Cleaned%20Data/Brazil_Sao%20Bernardo%20Do%20Campo_Cleaned.csv'
+dados = pd.read_csv(link)
+```
+:::
+
+
+## a) Criação de pipelines
+
+Usando *pipelines*, crie três diferentes pré-processamentos para as *features* numéricas da base: a) uma sem transformações; b) outra fazendo estandardização das variáveis; e, c), outra incluindo alguns polinômios. As *pipelines* devem usar regressão linear simples como modelo para predizer a variável `maximum_temprature`.
+
+## b) Benchmark
+
+Compare as *pipelines* anteriores rodando 100 vezes cada uma usando *holdout* com 70% das observações em treino, calculando para cada também o `RMSE`. Reporte os resultados por meio de um gráfico de boxplot. Dica: use uma função para encapsular *pipelines*, treino dos modelos e cálculo de métricas de validação.
+
+
+## c) Comparação de modelos
+
+Selecione a melhor *pipeline* do exercício anterior e crie outras três novas em cima dela: uma que regressão por `knn` em vez de regressão linear; uma que use MARS (o algoritmo `earth`); e, por fim, uma que use regressão por meio de árvore de decisão (`tree` ou `regr.rpart`). Rode 100 vezes cada *pipeline* e compare novamente os `RMSE` usando um gráfico de boxplot.
+
+
+## d) Validação
+
+Usando a melhor *pipeline* encontrada no exercício anterior, faça validação nas seguintes bases de dados:
+
+::: {.panel-tabset}
+
+## R
+
+``` {.r}
+# Clima em Campinas
+campinas <- "https://raw.githubusercontent.com/jacobwright32/Web_Scraper_AI_Core_Project/bb4865ae568e23ab8fadb6ea58cf117df2164ef3/web%20scraping/Cleaned%20Data/Brazil_Sao%20Bernardo%20Do%20Campo_Cleaned.csv"
+campinas <- readr::read_csv(campinas)
+
+# Clima em Southampton
+southampton <- "https://raw.githubusercontent.com/jacobwright32/Web_Scraper_AI_Core_Project/master/web%20scraping/Cleaned%20Data/United%20Kingdom_Southampton_Cleaned.csv"
+southampton <- readr::read_csv(southampton)
+```
+
+## Python
+
+``` {.python}
+# Clima em Campinas
+campinas = 'https://raw.githubusercontent.com/jacobwright32/Web_Scraper_AI_Core_Project/bb4865ae568e23ab8fadb6ea58cf117df2164ef3/web%20scraping/Cleaned%20Data/Brazil_Sao%20Bernardo%20Do%20Campo_Cleaned.csv'
+campinas = pd.read_csv(campinas)
+
+# Clima em Southampton
+southampton = 'https://raw.githubusercontent.com/jacobwright32/Web_Scraper_AI_Core_Project/master/web%20scraping/Cleaned%20Data/United%20Kingdom_Southampton_Cleaned.csv'
+southampton = pd.read_csv(southampton)
+```
+:::
+
+
+## e) Visualização
+
+Usando os resultados da melhor *pipeline*, plote a relação entre predições e valores reais de `maximum_temprature` nas duas bases de validação.
+
+
+# 2) Árvores de decisão e *bag-of-words*
+
+Como vimos, pré-processamento deve ser aplicado *antes* de fazermos *split sample* de validação (i.e., criar amostras de teste e de treino). Agora, implemente um *workflow* que leva isso em conta. Para tanto, você deverá criar uma função que separe textos em treino e teste, que aplique pré-processamento apenas na amostra de treino e que, depois, replique ele na amostra de teste para, então, rodar um algoritmo e calcular alguma métrica de validação.
+
+
+Para esse exercício, será necessário carregar uma base de discursos presidenciais feitos por Dilma Rousseff e Michel Temer em parte de seus mandatos:
+
+::: {.panel-tabset}
+
+## R
+
+``` {.r}
+link <- "https://github.com/FLS-6497/datasets/raw/main/aula5/discursos_presidenciais.csv"
+discursos <- readr::read_csv2(link)
+```
+
+## Python
+
+``` {.python}
+import pandas as pd
+
+link = 'https://github.com/FLS-6497/datasets/raw/main/aula5/discursos_presidenciais.csv'
+discursos = pd.read_csv(link, sep=';')
+```
+:::
+
+
+Também precisaremos fazer pré-processamento dos textos:
+
+
+::: {.panel-tabset}
+
+## R
+
+``` {.r}
+library(mlr3verse)
+
+# Exemplo
+gr <- po("textvectorizer", remove_punct = TRUE, remove_numbers = TRUE,
+          min_termfreq = 20) %>>%
+  ...
+  
+# Ver mais em: https://mlr3pipelines.mlr-org.com/reference/mlr_pipeops_textvectorizer.html
+```
+
+## Python
+
+``` {.python}
+from sklearn.feature_extraction.text import CountVectorizer
+
+vct = CountVectorizer() # Ha mais hyperparametros
+X = vct.fit_transform(discursos.discurso)
+```
+
+:::
+
+
+## a) *Pipelines*
+
+Usando *pipelines*, crie duas *pipelines* diferentes de pré-processamentos para as os discursos da base: a) uma que só mantenha termos que aparecem em pelo menos 20% dos documentos (ou ao menos em 20 documentos); outra igual a anterior que permita bi-gramas. As *pipelines* devem usar *Naive Bayes* como modelo para predizer a variável `planalto`.
+
+
+## b) Benchmark
+
+Rode cada *pipeline* 10 vezes, calculando o `F1` de cada predição do modelo na base de teste que tenha 20% dos discursos. Plote os resultados usando boxplot.
+
+
+## c) Modelos
+
+Use a melhor *pipeline* para criar outra, que em vez de *Naive Bayes* use árvore de decisão (`classif.rpart`, no caso do `mlr3`). Rode 10 vezes cada uma, calcule e reporte o `F1` para cada uma.
+
+
+
+
+
+
+
+
+
+
+
